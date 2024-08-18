@@ -14,4 +14,34 @@ public class AlbumDao {
 		return null;
 	}
 
+	public Object indexPage() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	public Object allTogetherPage() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	public Object ourCelebrationsPage() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	public Object ourTripsPage() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	public Object outdoorRecreationPage() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	public Object oldPhotosPage() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
 }
