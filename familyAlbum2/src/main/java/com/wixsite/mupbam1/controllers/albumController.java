@@ -4,9 +4,12 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import com.wixsite.mupbam1.dao.AlbumDao;
+import com.wixsite.mupbam1.models.Section;
 
 @Controller
 @RequestMapping("/album")
@@ -21,7 +24,7 @@ public class albumController {
 	@GetMapping()
 	public String index(Model model) {
 		model.addAttribute("index", albumDao.index());
-		return "album/mainMenu";
+		return "album/mainMenu1";
 	}
 	
 	@GetMapping("/index")
@@ -53,6 +56,16 @@ public class albumController {
 	public String oldPhotosPage(Model model) {
 		model.addAttribute("indexPage", albumDao.oldPhotosPage());
 		return "album/old_photos";
+	}
+	@GetMapping("/create_new_gallery")
+	public String newGallery(Model model) {
+		model.addAttribute("section", new Section());
+		return "album/create_new_gallery";
+	}
+	@PostMapping()
+	public String createAlbum(@ModelAttribute("section") Section section) {
+		albumDao.save(section);
+		return "redirect:/album";
 	}
 
 }

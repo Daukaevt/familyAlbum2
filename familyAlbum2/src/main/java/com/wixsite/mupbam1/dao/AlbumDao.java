@@ -44,4 +44,14 @@ public class AlbumDao {
 		return null;
 	}
 
+	public Object createGalleryPage() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	public void save(Section section) {
+		// TODO Auto-generated method stub
+		
+	}
+
 }

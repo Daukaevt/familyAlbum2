@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Create new gallery!</title>
+</head>
+<body>
+Hello from create_new_gallery!
+
+ 
+		
+		 	 <form th:method="POST" th:action="@{album/create_new_gallery}" th:object=${section}>
+    	 	<div>
+    	 		<input type="submit" value="Create new album!"/>
+    	 	</div>
+    	 </form>
+		
+</body>
+</html>

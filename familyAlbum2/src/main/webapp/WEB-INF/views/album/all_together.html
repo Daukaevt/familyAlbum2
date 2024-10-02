@@ -1,13 +1,109 @@
 <!DOCTYPE html>
-<html>
-
+<html lang="en">
 <head>
-	<meta charset="UTF-8">
-	<title>Insert title here</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Photo Gallery</title>
+<style>
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	font-family: Arial, sans-serif;
+	background-color: #f4f4f4;
+	color: #333;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding: 20px;
+	
+	  background-image: url('https://img.freepik.com/free-vector/school-books-elements-set_1284-34322.jpg?t=st=1726339452~exp=1726343052~hmac=239296cac8e8de0b335658a780cf1ac7c0ef92cdf4af57db8b6b077fcc73ebce&w=740');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+header {
+	margin-bottom: 30px;
+}
+
+h1 {
+	font-size: 36px;
+	color: #444;
+	margin-bottom: 20px;
+}
+
+.gallery {
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+	gap: 20px;
+	width: 100%;
+	max-width: 1200px;
+}
+
+.photo {
+	overflow: hidden;
+	position: relative;
+	border-radius: 10px;
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+	background-color: white;
+	transition: transform 0.3s;
+	margin: auto;
+}
+
+.photo:hover {
+	transform: scale(1.05);
+}
+
+.photo img {
+	width: 100%;
+	height: auto;
+	display: block;
+	margin: auto;
+ 
+	border-radius: 10px;
+}
+
+/* Адаптивность для мобильных устройств */
+@media ( max-width : 600px) {
+	h1 {
+		font-size: 28px;
+	}
+	.gallery {
+		grid-template-columns: 1fr;
+		gap: 15px;
+	}
+}
+</style>
 </head>
-
 <body>
-	hello, from all_together!
-</body>
 
+	<header>
+		<h1>ALL TOGETHER ALBUM</h1>
+	</header>
+
+	<section class="gallery">
+		<div class="photo">
+			<img src="https://iili.io/dVsNLrv.jpg" alt="photo1">
+		</div>
+		<div class="photo">					
+		</div>
+		<div class="photo">
+			<img src="https://iili.io/dlUtcVS.jpg" alt="photo3">
+		</div>
+		<div class="photo">
+			<img src="photo4.jpg" alt="photo4">
+		</div>
+		<div class="photo">
+			<img src="photo5.jpg" alt="photo5">
+		</div>
+		<div class="photo">
+			<img src="photo6.jpg" alt="photo6">
+		</div>
+	</section>
+
+</body>
 </html>
